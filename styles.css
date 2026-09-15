@@ -1,0 +1,107 @@
+/* Import some playful fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+    --main-bg: #fff1f2; /* Soft pastel pink background */
+    --text-dark: #4c1d95; /* Deep indigo text for readability */
+    --accent-pink: #ec4899;
+    --accent-purple: #8b5cf6;
+    --accent-blue: #0ea5e9;
+    --accent-yellow: #facc15;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-dark);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* The overall container styling with a fun border */
+body > * {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 24px;
+    /* A multi-colored gradient border effect */
+    border: 4px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    /* A gradient text effect that really pops! */
+    background: linear-gradient(90deg, var(--accent-pink) 0%, var(--accent-purple) 50%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    color: var(--accent-purple);
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Super Fun List Styling! */
+ul.crazy-list li {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-purple);
+    color: white;
+    border-radius: 8px;
+    /* Add a subtle box shadow for depth */
+    box-shadow: 3px 3px 0px var(--accent-blue);
+    list-style: none; /* Remove default bullets */
+}
+
+/* Style the ordered list differently but just as colorful */
+ol.how-list {
+    counter-reset: fancy-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+ol.how-list li {
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Custom colorful numbers for the ordered list */
+ol.how-list li::before {
+    counter-increment: fancy-counter;
+    content: counter(fancy-counter);
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 0px var(--accent-pink);
+}
